@@ -32,6 +32,27 @@ v2.9.alpha - XX/XX/XXXX
 	* Command line mode
 		- 2.5D Volume Calculation tool (-VOLUME ...)
 
+	* Rasterize tool
+		- new option to re-project contour lines computed on a scalar field (i.e. a layer other than the altitudes)
+			on the altitudes layer
+
+	* Edit > SF > Compute Stat. params
+		- the RMS of the active SF is now automatically computed and displayed in the Console
+
+	* LAS I/O filter
+		- the 'Spatial Reference System' of LAS files is now stored as meta-data and restored
+			when exporting the cloud as a LAS/LAZ file.
+
+- Bug fixes:
+
+	* STL files are now output by default in BINARY mode in command line mode (no more annoying dialog)
+	* when computing distances, the octree could be modified but the LOD structure was not updated
+		(resulting in potentially heavy display artifacts)
+	* glitch fix: the 'SF > Gradient' tool was mistakenly renaming the input scalar field ('.gradient' appended)
+
+v2.8.1 - 16/02/2017
+----------------------
+
 - Bug fixes:
 
 	* LAS I/O filter: if the points of a LAS file were not saved in increasing GPS time order,
@@ -39,10 +60,8 @@ v2.9.alpha - XX/XX/XXXX
 	* A visible 2D label with the 'show 2D label' option disabled could break the picking process
 	* The sphere fitting algorithm was not always finding the optimal sphere
 	* Rasterize tool: scalar fields were vertically mirrored when exported to a geotiff raster
-	* STL files are now output by default in BINARY mode in command line mode (no more annoying dialog)
+	* [macOS] Fix the packaging of the qAnimation plugin so it can find the correct libraries
 	* qAnimation plugin: the export to separate frames was broken
-	* when computing distances, the octree could be modified but the LOD structure was not updated
-		(resulting in potentially heavy display artifacts)
 
 v2.8 - 12/18/2016
 ----------------------
