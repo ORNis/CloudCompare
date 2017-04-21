@@ -43,6 +43,9 @@ v2.9.alpha - XX/XX/XXXX
 		- the 'Spatial Reference System' of LAS files is now stored as meta-data and restored
 			when exporting the cloud as a LAS/LAZ file.
 
+        * New Menu Entry: Edit > Grid
+                - Delete scan grids: An underlying grid structure can now be deleted
+
 - Bug fixes:
 
 	* STL files are now output by default in BINARY mode in command line mode (no more annoying dialog)

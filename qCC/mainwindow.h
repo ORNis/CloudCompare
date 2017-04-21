@@ -365,6 +365,7 @@ protected slots:
 	void doActionCreatePlane();
 	void doActionEditPlane();
 
+    void doActionDeleteScanGrids();
 	void doActionDeleteScalarField();
 	void doActionSmoothMeshSF();
 	void doActionEnhanceMeshSF();
@@ -378,7 +379,7 @@ protected slots:
 	void doActionResampleWithOctree();
 	void doActionComputeMeshAA();
 	void doActionComputeMeshLS();
-	void doActionMeshScanGrids();
+    void doActionMeshScanGrids();
 	void doActionComputeDistanceMap();
 	void doActionComputeDistToBestFitQuadric3D();
 	void doActionMeasureMeshSurface();
